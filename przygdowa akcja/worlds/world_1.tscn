@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmm5jsuucfseh"]
+
+[ext_resource type="PackedScene" uid="uid://yo43ecsdlbab" path="res://magik.tscn" id="1_jfsac"]
+
+[node name="world_1" type="Node2D"]
+
+[node name="magik" parent="." instance=ExtResource("1_jfsac")]
+
+[node name="Camera2D" type="Camera2D" parent="magik"]
+zoom = Vector2(2.5, 2.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 12.0

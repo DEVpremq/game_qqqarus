@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://ptuqxp34ay4y"]
+
+[ext_resource type="Texture2D" uid="uid://gceqdtufsn3f" path="res://images.jpg" id="1_4smw2"]
+[ext_resource type="Script" path="res://menu.gd" id="1_mqsnt"]
+[ext_resource type="Texture2D" uid="uid://dlqdkg6r2eu6m" path="res://cooltext459713836483025.png" id="2_woqyq"]
+[ext_resource type="AudioStream" uid="uid://vt5n25tdsa6m" path="res://click.wav" id="4_dfoxc"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqsnt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4smw2")
+
+[node name="opcons" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -24.5
+offset_right = 94.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "opcions"
+
+[node name="info" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 66.5
+offset_right = 94.0
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "opcions"
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = 157.5
+offset_right = 94.0
+offset_bottom = 210.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "exit"
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -110.0
+offset_right = 94.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.0
+offset_top = 105.0
+offset_right = 506.0
+offset_bottom = 222.0
+grow_horizontal = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_woqyq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dfoxc")
+
+[connection signal="pressed" from="opcons" to="." method="_on_opcons_pressed"]
+[connection signal="pressed" from="info" to="." method="_on_info_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

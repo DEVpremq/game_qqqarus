@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://yo43ecsdlbab"]
+
+[ext_resource type="Script" path="res://magik.gd" id="1_mkc1b"]
+[ext_resource type="Texture2D" uid="uid://b3va3r738otch" path="res://New Piskel (4).png" id="2_c1l8i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5f8"]
+size = Vector2(14, 22)
+
+[node name="magik" type="CharacterBody2D"]
+script = ExtResource("1_mkc1b")
+
+[node name="magik_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_c1l8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_4j5f8")
